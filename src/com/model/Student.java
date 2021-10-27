@@ -55,13 +55,27 @@ public class Student extends People {
 
     @Override
     public String toString() {
-        return "Student{" +
-                " name: " + getName() +
-                "mathScore=" + mathScore +
-                ", chemistryScore=" + chemistryScore +
-                ", physicScore=" + physicScore +
-                ", avgScore=" + avgScore +
-                ", id=" + id +
-                '}';
+        return String.format("|%-8s|%-10d|%-7d|%-13f|%-13f|%-13f|%-13f|",
+                getName(), getId(), getAge(), mathScore, chemistryScore, physicScore,getAvgScore());
+    }
+    public static void printLine(int space) {
+        for (int i = 0; i <= space; i++) {
+            if (i == space) {
+                System.out.print("+");
+            } else {
+                System.out.print("-");
+            }
+        }
+    }
+    public static void printFullLine() {
+        System.out.print("+");
+        printLine(8);
+        printLine(10);
+        printLine(7);
+        printLine(13);
+        printLine(13);
+        printLine(13);
+        printLine(13);
+        System.out.println();
     }
 }

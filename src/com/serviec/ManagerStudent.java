@@ -73,9 +73,14 @@ public class ManagerStudent implements Manager<Student> {
 
     @Override
     public void print() {
+        System.out.printf("|%-8s|%-10s|%-7s|%-13s|%-13s|%-13s|%-13s|%n",
+                "Tên", "ID", "Tuổi", "Điểm toán", "Điểm hóa", "Điểm lý", "Điểm TB");
+        Student.printFullLine();
         for (Student student : listStudent) {
             System.out.println(student);
+            Student.printFullLine();
         }
+
     }
 
     @Override
