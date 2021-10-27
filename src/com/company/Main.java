@@ -7,14 +7,11 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static Student main(String[] args) {
+    public static void main(String[] args) {
         ManagerStudent listStudent = new ManagerStudent();
         listStudent.add(new Student("ánh", 18, 9, 9, 9));
         listStudent.add(new Student("khánh", 18, 10, 10, 10));
         listStudent.add(new Student("hương", 18, 8, 8, 8));
-        listStudent.print();
-        listStudent.sortAvgScore();
-        listStudent.print();
         while (true) {
             Scanner sc = new Scanner(System.in);
             int choice = -1;
